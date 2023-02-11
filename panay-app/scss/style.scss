@@ -1,0 +1,37 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+$theme-colors: (
+  "primary": #783028,
+  "secondary": #e09d21,
+  "bgdefault": #FFFCF5,
+  "primaryhover": #CC7066,
+  "danger": #dc3545,
+  "success": #198754,
+  "cancel": #6c757d,
+  "sale": #2b7232,
+  "expense": #BA090F
+);
+
+$nav-link-color: #E6E6E6;
+$nav-link-hover-color: white;
+$nav-tabs-link-active-bg: white;
+
+html,
+body,
+#app {
+  min-height: calc(100vh - 70px);
+  margin: 0px
+}
+
+body {
+  position: relative;
+  /* Sum of heights for footer and nav */
+  padding-bottom: 70px;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here

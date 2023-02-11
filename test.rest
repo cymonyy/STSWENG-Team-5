@@ -1,0 +1,140 @@
+# --- INSTALL THE FF. TO USE ---
+# Sorta like a mini Postman
+
+# Name: REST Client
+# Id: humao.rest-client
+# Description: REST Client for Visual Studio Code
+# Version: 0.25.1
+# Publisher: Huachao Mao
+# VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+
+
+http://localhost:3000/adminviewsales
+
+###
+
+POST http://localhost:3000/adminaddsales HTTP/1.1
+content-type: application/json
+
+    {
+    "branchID": "102",
+    "branchName": "Makati",
+    "amount": 2200.75,
+    "customerCount": 10,
+    "datetime": "2022-03-02T13:00:00.000Z"
+    }
+
+###
+
+POST http://localhost:3000/adminaddexpense HTTP/1.1
+content-type: application/json
+
+    {
+        "branchID": "102",
+        "branchName": "Pag-asa QC",
+        "item": "Flour",
+        "category": "Bakery Items",
+        "amount": 100.00,
+        "notes": "palengke",
+        "datetime": "2022-03-03T11:00:00.000Z"
+    }
+
+###
+
+http://localhost:3000/adminviewexpense HTTP/1.1 
+
+
+###
+
+POST http://localhost:3000/admindeletesales HTTP/1.1
+content-type: application/json
+
+    {
+        "id":"637efe54cc220cfa2d1e27b8"
+    }
+
+###
+
+POST http://localhost:3000/admindeleteexpense HTTP/1.1
+content-type: application/json
+
+    {
+        "id":"637f80a08a447ca7bbf9fac2"
+    }
+
+###
+
+http://localhost:3000/viewbranch HTTP/1.1
+
+###
+POST http://localhost:3000/adminaddcheque  HTTP/1.1
+content-type: application/json
+
+    {
+        "datetime":"2022-03-01T00:00:00.000Z",
+        "account": "Meralco",
+        "category": "Salary",
+        "amount": 100.00,
+        "branchID": 103,
+        "branchName": "Tandang Sora QC"
+    }
+
+###
+
+http://localhost:3000/adminviewcheque HTTP/1.1
+
+###
+POST http://localhost:3000/editcheque  HTTP/1.1
+content-type: application/json
+
+    {
+        "id":"6381cfb91bd23e907bad5964",
+        "datetime":"2022-11-23T11:00:00.000Z",
+        "account": "111",
+        "category": "bbb",
+        "amount": "50.505"
+    }
+
+###
+
+POST http://localhost:3000/deletecheque  HTTP/1.1
+content-type: application/json
+
+    {
+        "id":"6381cfb91bd23e907bad5964"
+    }
+
+###
+
+POST http://localhost:3000/genreport  HTTP/1.1
+content-type: application/json
+
+    {
+        "branchID":"102",
+        "date": "2022-11-23"
+    }
+
+###
+
+POST http://localhost:3000/adminaddexpense HTTP/1.1
+content-type: application/json
+
+    {
+        "branchID": "102",
+        "branchName": "Pag-asa QC",
+        "item": "Flour",
+        "category": "Grocery",
+        "amount": 300.00,
+        "notes": "palengke",
+        "datetime": "2022-11-23T11:00:00.000Z"
+    }
+
+###
+
+POST http://localhost:3000/genqrtr  HTTP/1.1
+content-type: application/json
+
+    {
+        "branchID":"102",
+        "date": "2022-01-23"
+    }
